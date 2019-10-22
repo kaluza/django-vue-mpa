@@ -1,7 +1,7 @@
 <template>
-  <div id="secondApp">
-    <h1>The count from App02 is: {{ count }}</h1>
-    <button @click='doDecrement' >Decrement</button>
+  <div id="app">
+        <h1>The count is APP01: {{ count }}</h1>
+    <button @click='doIncrement' >Increment</button>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import store from './store/store'
 
 export default {
-  name: 'secondApp',
+  name: 'firstApp',
   store,
   components: {
   },
@@ -18,21 +18,21 @@ export default {
       return this.$myStore.state.count
     }
   },
-      methods: {
-    doDecrement () {
-      this.$myStore.commit('decrement')
+    methods: {
+    doIncrement () {
+      this.$myStore.commit('increment')
     }
   }
 }
 </script>
 
 <style>
-#secondApp {
+#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: blue;
+  color: #2c3e50;
   margin-top: 60px;
 }
 </style>

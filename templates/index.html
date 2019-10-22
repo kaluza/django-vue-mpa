@@ -1,11 +1,30 @@
 {% extends 'base.html' %}
+{% load render_bundle from webpack_loader %}
 
 
 {% block content %}
 
-    <ul>
-        <li><a href="{% url 'vue_app_01' %}">Vue App 01</a></li>
-        <li><a href="{% url 'vue_app_02' %}">Vue App 02</a></li>
-    </ul>
+    <h1>View with to entry points</h1>
+
+   <div id="secondApp">
+        <secondApp></secondApp>
+    </div>
+    {% render_bundle 'chunk-vendors' %}
+    {% render_bundle 'vue_app_02' %}
+
+
+    <div id="firstApp">
+        <firstApp></firstApp>
+    </div>
+    {% render_bundle 'chunk-vendors' %}
+    {% render_bundle 'vue_app_01' %}
+
+    
+
+
+
+
+ 
+
 
 {% endblock %}

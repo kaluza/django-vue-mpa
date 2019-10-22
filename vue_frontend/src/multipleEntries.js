@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './App.vue'
+import App01 from './App01.vue'
 import App02 from './App02.vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
@@ -9,12 +9,10 @@ Vue.use(storePlugin)
 
 Vue.config.productionTip = false
 
-
-/*new Vue({
-  render: h => h(App02),
+new Vue({
+  render: app02 => app02(App02),
 }).$mount('#secondApp')
 
-
 new Vue({
-  render: h => h(App),
-}).$mount('#firstApp')*/
+  render: app01 => app01(App01),
+}).$mount('#firstApp')

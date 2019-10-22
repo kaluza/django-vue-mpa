@@ -21,6 +21,6 @@ from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     path("", TemplateView.as_view(template_name="index.html"), name="index"),
-    path("vue_app_01/", TemplateView.as_view(template_name="vue_app_01.html"), name="vue_app_01"),
-    path("vue_app_02/", TemplateView.as_view(template_name="vue_app_02.html"), name="vue_app_02"),
+    #path("vue_app_01/", TemplateView.as_view(template_name="vue_app_01.html"), name="vue_app_01"),
+    #path("vue_app_02/", TemplateView.as_view(template_name="vue_app_02.html"), name="vue_app_02"),
 ]

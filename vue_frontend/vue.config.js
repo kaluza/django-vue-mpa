@@ -2,13 +2,15 @@ const BundleTracker = require("webpack-bundle-tracker");
 
 const pages = {
     'vue_app_01': {
-        entry: './src/main.js',
+        entry: './src/multipleEntries.js',
+        //entry: './src/main.js',
         chunks: ['chunk-vendors']
     },
     'vue_app_02': {
-        entry: './src/newhampshir.js',
+        entry: './src/multipleEntries.js',
         chunks: ['chunk-vendors']
     },
+
 }
 
 module.exports = {
